@@ -1,0 +1,19 @@
+# RxAndroid備忘録
+## 主要メソッドについて
+- from
+	リストの要素一つ一つに対しての処理をしたい場合に便利
+	subscribeした時は要素一つ一つに対してnextが呼ばれる
+- just
+	Observableを手軽に作成したい時に便利
+	引数をそのままObservable化するのでnextでは引数に入れたものがそのままくる
+- create
+	メソッドの非同期処理をしたい時に便利
+- filter
+	条件にあったものだけを残す
+	return Bool
+- map
+	文字列の長さなどを判定する際に使う
+	return Integer
+- merge
+	複数のObservableを一つにまとめることができる
+	

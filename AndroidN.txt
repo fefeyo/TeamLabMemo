@@ -1,0 +1,42 @@
+# AndroidNに移行するにあたっての変更点
+## Dozeモードについて
+ユーザーがAndroidを使っていない時（机においている時など）にダウンロードなどのネットワーク処理を一時的に中断するモード
+※ダウンロード、アップロードの際に途中から再開してくれるライブラリなどを使うと良い？
+
+## Android
+WAKE_LOCKを取ることはできない
+GCMNetworkManagerを使って指定した時間から〜秒とかで使わないとできない
+タイマー起動などに関してはJobSchedulerかGCMNetworkManagerを使う
+JobSchedulerはAPI21から
+Android7.0 Nougat(ヌガー)気になる変更点
+	http://androidlover.net/android-os/android-m/android-m-surely-releases-2015.html
+
+## 気になる機能
+ActivityOptions
+	遷移アニメーション、サムネスケールアップとか
+	http://www.adakoda.com/adakoda/2012/07/android-android-41-activity.html
+AndroidAnnotations
+	ソースコードダイエット
+Dagger
+	依存性注入、インスタンス生成を簡素化
+Android-Orma
+	ORマッパー、マイグレーションがしっかりしてるらしい
+
+## 参考サイト
+カラーベストプラクティス
+	http://qiita.com/konifar/items/68f196dc7acacfcf40cf
+マテリアルデザインカラーパレット
+	https://material.google.com/style/color.html
+明日から使えるRxJava頻出頻出パターン
+	http://www.slideshare.net/KazukiYoshida/droidkaigi-rxjava
+Activity・FragmentはBuilderを使って呼びだそう
+	https://blog.yohei.org/android-acivity-fragment-builder/
+
+
+## AWSできになる機能
+	Lambda
+	S3(サムネイル作成機能等)
+		http://docs.aws.amazon.com/ja_jp/apigateway/latest/developerguide/integrating-api-with-aws-services-s3.html
+	SimpleNotificationService
+	ElasticTranscoder
+	SimpleQueueService

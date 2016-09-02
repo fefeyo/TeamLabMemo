@@ -1,0 +1,3 @@
+# Team-LabインターンAndroid備忘録
+	キュー・スタックの機能を使いたいときはLinkedListを使ってgetFirst,getLastを呼べばOK
+	非同期処理をキューで貯めてバックグラウンドで動かしたい場合はIntentServiceを使う
